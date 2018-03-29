@@ -7,7 +7,7 @@
   }
   module.factory('aWelzijnDownloadFileService', ['$http', 'aWelzijnNotificationService', function ($http, notificationService) {
 
-        function _downloadBestand(requestUrl, options, naam) {
+        function _downloadBestand(requestUrl, options, naam, callback) {
 
             var httpConfig = { method: "GET", url: requestUrl, responseType: 'arraybuffer' };
             if (options.params) httpConfig.params = options.params;
@@ -74,6 +74,10 @@
 
                 if (!success) {
                     notificationService.addError("Het bestand kon niet worden gedownload {" + filename + "}.");
+                }
+
+                if (callback) {
+                    callback();
                 }
             })
             .error(function (data, status, headers, config, statusText) {
