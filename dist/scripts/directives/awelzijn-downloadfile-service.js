@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 (function (module) {
   try {
     module = angular.module('awelzijn.downloadfileservice');
@@ -90,4 +90,3 @@
         };
   }]);
 })();;
-;

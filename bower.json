@@ -1,6 +1,6 @@
 {
   "name": "awelzijn-downloadfile-service",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "main": [
     "dist/awelzijn-downloadfile-service.js"
   ],
